@@ -58,7 +58,7 @@ def main():
     # Add it to the resale store's inventory
     print("Buying", computer["description"])
     print("Adding to inventory...")
-    computer_id = buy(computer)
+    computer_id = computer.buy()
     print("Done.\n")
 
     # Make sure it worked by checking inventory
