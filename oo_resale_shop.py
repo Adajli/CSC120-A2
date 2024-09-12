@@ -30,7 +30,7 @@ class ResaleShop:
         else:
             print("Item", item_id, "not found. Please select another item to refurbish.")
 
-    def buy(self,computer: Dict):
+    def buy(self,computer):
         global itemID
         self.itemID += 1 # increment itemID
         self.inventory[itemID] = computer
