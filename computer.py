@@ -1,4 +1,4 @@
-from typing import Any
+from computer import Any
 
 
 class Computer:
@@ -20,29 +20,18 @@ class Computer:
                     operating_system: str,
                     year_made: int,
                     price: int):
-        self.description = description
+        self.description = ""
         self.processor_type = processor_type
         self.hard_drive_capacity = hard_drive_capacity
-        self.memory = memory
+        self.memory = 0
         self. operating_system = operating_system
-        self.year_made = year_made
-        self.price = price 
+        self.year_made = 0
+        self.price = 0 
 
     # What methods will you need? 
-    def storeInformation(self, description:str, processor_type:str, hard_drive_capacity: int,
-                    memory: int,
-                    operating_system: str,
-                    year_made: int,
-                    price: int):
-        description = self.description 
-        processor_type = self.processor_type
-        hard_drive_capacity = self.hard_drive_capacity
-        memory = self.memory
-        operating_system = self.operating_system
-        year_made = self.year_made
-        price == self.price
-        print(description, processor_type,hard_drive_capacity,memory,operating_system,year_made,price)
-
+    def attributes(self):
+        return vars(self)
+    
 def main():
         my_computer = Computer(
             "Mac Pro (Late 2013)",
@@ -50,7 +39,7 @@ def main():
             1024, 64,
             "macOS Big Sur", 2013, 1500
         )    
-        my_computer.storeInformation()
-        print(my_computer)
+         
+        print(my_computer.attributes())
 
 main()
