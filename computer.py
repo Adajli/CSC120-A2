@@ -9,7 +9,7 @@ class Computer:
     year_made: int
     price: int
     # How will you set up your constructor?
-    # I will use the self and set upt the attributes to the respective type.
+    # I will use the self and set up the attributes to the respective type.
     # Remember: in python, all constructors have the same name (__init__)
     def __init__(self,description: str,
                     processor_type: str,
