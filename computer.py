@@ -1,3 +1,6 @@
+from typing import Any
+
+
 class Computer:
 
     # What attributes will it need?
@@ -27,6 +30,8 @@ class Computer:
         self.price = price 
 
     # What methods will you need?
+    def __getdescription__(self, description: str):
+         print(self.description)
 
 def main():
         my_computer = Computer(
