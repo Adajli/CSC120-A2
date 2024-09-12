@@ -7,7 +7,7 @@ class Computer:
     description: str = "<NO DESC AVAILABLE>"
     processor_type: str
     hard_drive_capacity: int
-    memory: int
+    memory: int = 0
     operating_system: str
     year_made: int
     price: int
@@ -30,7 +30,14 @@ class Computer:
         self.price = price 
 
     # What methods will you need? 
-  
+    def storeInformation(self,description:str, processor_type:str, hard_drive_capacity: int,
+                    memory: int,
+                    operating_system: str,
+                    year_made: int,
+                    price: int):
+        description = self.description
+        processor_type = self.processor_type
+
 def main():
         my_computer = Computer(
             "Mac Pro (Late 2013)",
@@ -38,7 +45,7 @@ def main():
             1024, 64,
             "macOS Big Sur", 2013, 1500
         )    
-        
+        my_computer.storeInformation()
         print(my_computer)
 
 main()
