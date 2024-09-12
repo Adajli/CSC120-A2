@@ -30,7 +30,14 @@ class Computer:
         self.price = price 
 
     # What methods will you need?
-     
+     def storeComputer(description: str,
+                    processor_type: str,
+                    hard_drive_capacity: int,
+                    memory: int,
+                    operating_system: str,
+                    year_made: int,
+                    price: int):
+         
 
 def main():
         my_computer = Computer(
