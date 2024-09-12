@@ -29,7 +29,7 @@ class Computer:
         self.year_made = year_made
         self.price = price 
 
-    # What methods will you need?
+# What methods will you need?
     def storeComputer(description: str,
                     processor_type: str,
                     hard_drive_capacity: int,
