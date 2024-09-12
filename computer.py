@@ -30,8 +30,7 @@ class Computer:
         self.price = price 
 
     # What methods will you need?
-    def getDescription(self, description:str):
-         return self.description
+     
 
 def main():
         my_computer = Computer(
@@ -40,7 +39,7 @@ def main():
                 1024, 64,
                 "macOS Big Sur", 2013, 1500
         )
+        
         print(my_computer)
 
 main()
-getDescription()
