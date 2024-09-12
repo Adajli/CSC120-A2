@@ -1,4 +1,4 @@
-from computer import Any
+from typing import Any
 
 
 class Computer:
@@ -31,6 +31,11 @@ class Computer:
     # What methods will you need? 
     def attributes(self):
         return vars(self)
+    def updateOS(self,operating_system):
+        self.operating_system = operating_system
+    def updatePrice(self,price:int):
+        self.price = price
+
     
 def main():
         my_computer = Computer(
@@ -39,7 +44,7 @@ def main():
             1024, 64,
             "macOS Big Sur", 2013, 1500
         )    
-         
+        my_computer.updatePrice(150)
         print(my_computer.attributes())
 
 main()

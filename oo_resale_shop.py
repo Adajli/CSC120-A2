@@ -4,20 +4,15 @@ class ResaleShop:
     inventory : Dict[int, Dict] = {}
     itemID = 0 
     item_id: int
-    new_price: int
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
     def __init__(self, item_id: int,
-                  new_price:int,
                   inventory:Dict[int,Dict] ):
         self.item_id = 0
-        self.new_price = new_price
         self.inventory = {}
 
     # What methods will you need?
-    def updatePrice(self,new_price:int):
-        self.new_price = new_price
-
+   
     def refurbish(self,inventory,item_id: int, new_os: Optional[str] = None):
         if item_id in inventory:
             computer = inventory[item_id] # locate the computer
