@@ -7,9 +7,10 @@ class ResaleShop:
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
     def __init__(self, item_id: int,
-                  inventory:Dict[int,Dict] ):
+                  inventory:Dict[int,Dict], computer):
         self.item_id = 0
         self.inventory = {}
+        self.computer = computer(self)
 
     # What methods will you need?
    
