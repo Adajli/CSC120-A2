@@ -43,7 +43,7 @@ _____ 1 pt: Clear and consistent indentation
 
 _____ 1 pt: Adheres to conventions on naming / capitalization
 
-_____ 1 pt: Methods and variables all have clear and descriptive names
+__**YES**___ 1 pt: Methods and variables all have clear and descriptive names
 
 _____ 1 pt: All required files included with submission (including completed checklist file)
 
