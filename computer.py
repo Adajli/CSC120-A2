@@ -45,6 +45,7 @@ def main():
             "macOS Big Sur", 2013, 1500
         )    
         my_computer.updatePrice(150)
+        my_computer.updateOS("OS X El Capitan ")
         print(my_computer.attributes())
 
 main()
