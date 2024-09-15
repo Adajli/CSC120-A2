@@ -25,17 +25,17 @@ __**YES**__ 1 pt: Constructor for `ResaleShop` class is present and sets attribu
 
 ### Level 3 (4 pts)
 
-____ 1 pt: Can successfully add a new `Computer` to the inventory
+__**PART**__ 1 pt: Can successfully add a new `Computer` to the inventory
 
-____ 1 pt: Can successfully remove a `Computer` from the inventory
+___**PART**__ 1 pt: Can successfully remove a `Computer` from the inventory
 
 __**YES**__ 1 pt: Can successfully update the price/OS of a `Computer` contained in the inventory
 
-____ 1 pt: Program prints appropriate error messages
+__**YES**__ 1 pt: Program prints appropriate error messages
 
 ## General Items (10 pts):
 
-_____ 4 pts: Program executes fully & consistently without crashing (exception/freeze)
+___**YES**__ 4 pts: Program executes fully & consistently without crashing (exception/freeze)
 
 __**YES**___ 1 pt: Classes & class members all have header comments
 
