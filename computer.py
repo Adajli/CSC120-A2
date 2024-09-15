@@ -38,8 +38,8 @@ class Computer:
     'Allows input of updating the price.'
     def updatePrice(self,price:int):
         self.price = price
-
-    
+    def updateYear(self, year_made):
+        self.year_made = year_made + 1
 def main():
         my_computer = Computer(
             "Mac Pro (Late 2013)",
@@ -48,6 +48,7 @@ def main():
             "macOS Big Sur", 2013, 1500
         )    
         my_computer.updatePrice(150)
+        my_computer.updateYear(2013)
         my_computer.updateOS("macOS Ventura 13.6 ")
         print(my_computer.attributes())
 

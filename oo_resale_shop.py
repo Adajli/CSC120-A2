@@ -1,6 +1,6 @@
 class ResaleShop:
     from typing import Dict, Optional 
-   
+    from oo_resale_shop import Computer
     # What attributes will it need?
     inventory : Dict[int, Dict] = {}
     itemID = 0 
@@ -8,7 +8,7 @@ class ResaleShop:
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
     def __init__(self, item_id: int,
-                  inventory:Dict[int,Dict], computer):
+                  inventory:Dict[int,Dict], computer: Computer):
         self.item_id = 0
         self.inventory = {}
         import computer
@@ -48,44 +48,47 @@ class ResaleShop:
         else:
             print("No inventory to display.")
 def main():
-     object = ResaleShop._init_(
+        object = ResaleShop._init_(1,dict[1,dict], Computer("Mac Pro (Late 2013)",
+            "3.5 GHc 6-Core Intel Xeon E5",
+            1024, 64,
+            "macOS Big Sur", 2013, 1500)
         ) 
         
-    print("-" * 21)
-    print("COMPUTER RESALE STORE")
-    print("-" * 21)
+        print("-" * 21)
+        print("COMPUTER RESALE STORE")
+        print("-" * 21)
 
-    # Add it to the resale store's inventory
-    print("Buying", computer["description"])
-    print("Adding to inventory...")
-    computer_id = computer.buy()
-    print("Done.\n")
+        # Add it to the resale store's inventory
+        print("Buying", object["description"])
+        print("Adding to inventory...")
+        computer_id = object.buy()
+        print("Done.\n")
 
-    # Make sure it worked by checking inventory
-    print("Checking inventory...")
-    computer.print_inventory()
-    print("Done.\n")
+        # Make sure it worked by checking inventory
+        print("Checking inventory...")
+        object.print_inventory()
+        print("Done.\n")
 
-    # Now, let's refurbish it
-    new_OS = "MacOS Monterey"
-    print("Refurbishing Item ID:", computer_id, ", updating OS to", new_OS)
-    print("Updating inventory...")
-    refurbish(computer_id, new_OS)
-    print("Done.\n")
+        # Now, let's refurbish it
+        new_OS = "MacOS Monterey"
+        print("Refurbishing Item ID:", computer_id, ", updating OS to", new_OS)
+        print("Updating inventory...")
+        object.refurbish(computer_id, new_OS)
+        print("Done.\n")
 
-    # Make sure it worked by checking inventory
-    computer.print("Checking inventory...")
-    computer.print_inventory()
-    print("Done.\n")
-    
-    # Now, let's sell it!
-    print("Selling Item ID:", computer_id)
-    computer.sell(computer_id)
-    
-    # Make sure it worked by checking inventory
-    print("Checking inventory...")
-    computer.print_inventory()
-    print("Done.\n")
+        # Make sure it worked by checking inventory
+        object.print("Checking inventory...")
+        object.print_inventory()
+        print("Done.\n")
+        
+        # Now, let's sell it!
+        print("Selling Item ID:", computer_id)
+        object.sell(computer_id)
+        
+        # Make sure it worked by checking inventory
+        print("Checking inventory...")
+        object.print_inventory()
+        print("Done.\n")
 
 # Calls the main() function when this file is run
 main()
