@@ -25,7 +25,7 @@ class Computer:
         self.hard_drive_capacity = hard_drive_capacity
         self.memory = 0
         self. operating_system = operating_system
-        self.year_made = 0
+        self.year_made = year_made
         self.price = 0 
 
     # What methods will you need? 
@@ -38,8 +38,12 @@ class Computer:
     'Allows input of updating the price.'
     def updatePrice(self,price:int):
         self.price = price
+    # Updates year
     def updateYear(self, year_made):
-        year_made += 1
+        self.year_made = self.year_made +1
+    # Get year
+    def getYear(year_made):
+         return year_made
 def main():
         my_computer = Computer(
             "Mac Pro (Late 2013)",
@@ -48,7 +52,7 @@ def main():
             "macOS Big Sur", 2013, 1500
         )    
         my_computer.updatePrice(150)
-        my_computer.updateYear(my_computer.year_made)
+        my_computer.updateYear(my_computer.getYear())
         my_computer.updateOS("macOS Ventura 13.6 ")
         print(my_computer.attributes())
 

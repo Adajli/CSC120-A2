@@ -1,6 +1,7 @@
+from typing import Dict, Optional 
+from computer import *
 class ResaleShop:
-    from typing import Dict, Optional 
-    from oo_resale_shop import Computer
+   
     # What attributes will it need?
     inventory : Dict[int, Dict] = {}
     itemID = 0 
@@ -8,12 +9,11 @@ class ResaleShop:
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
     def __init__(self, item_id: int,
-                  inventory:Dict[int,Dict], computer: Computer):
+                  inventory:Dict[int,Dict]):
         self.item_id = 0
         self.inventory = {}
-        import computer
-        self.computer = computer(self)
 
+       
     # What methods will you need?
    
     def refurbish(self,inventory,item_id: int, new_os: Optional[str] = None):
@@ -48,10 +48,7 @@ class ResaleShop:
         else:
             print("No inventory to display.")
 def main():
-        object = ResaleShop._init_(1,dict[1,dict], Computer("Mac Pro (Late 2013)",
-            "3.5 GHc 6-Core Intel Xeon E5",
-            1024, 64,
-            "macOS Big Sur", 2013, 1500)
+        object = ResaleShop._init_(1,dict[1,dict]
         ) 
         
         print("-" * 21)
