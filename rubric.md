@@ -25,9 +25,9 @@ __**YES**__ 1 pt: Constructor for `ResaleShop` class is present and sets attribu
 
 ### Level 3 (4 pts)
 
-__**PART**__ 1 pt: Can successfully add a new `Computer` to the inventory
+__**YES**__ 1 pt: Can successfully add a new `Computer` to the inventory
 
-___**PART**__ 1 pt: Can successfully remove a `Computer` from the inventory
+___**YES**__ 1 pt: Can successfully remove a `Computer` from the inventory
 
 __**YES**__ 1 pt: Can successfully update the price/OS of a `Computer` contained in the inventory
 
