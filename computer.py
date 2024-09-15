@@ -29,10 +29,13 @@ class Computer:
         self.price = 0 
 
     # What methods will you need? 
+    'Saves attributes of the computer by printing them.'
     def attributes(self):
         return vars(self)
+    'Allows input of updating the OS.'
     def updateOS(self,operating_system):
         self.operating_system = operating_system
+    'Allows input of updating the price.'
     def updatePrice(self,price:int):
         self.price = price
 
