@@ -5,10 +5,10 @@ class ResaleShop:
     # What attributes will it need?
     inventory : Dict[int, Dict] = {}
     itemID = 0 
-    item_id: int
+  
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
-    def __init__(self, item_id: int,
+    def __init__(self, 
                   inventory:Dict[int,Dict]):
         self.item_id = 0
         self.inventory = {}
@@ -36,8 +36,8 @@ class ResaleShop:
     def buy(self,computer):
         global itemID
         self.itemID += 1 # increment itemID
-        self.inventory[itemID] = computer
-        return itemID
+        self.itemID = computer
+        return self.itemID
     def printInventory(self,inventory):
         # If the inventory is not empty
         if inventory:
@@ -48,43 +48,46 @@ class ResaleShop:
         else:
             print("No inventory to display.")
 def main():
-        object = ResaleShop._init_(1,dict[1,dict]
-        ) 
-        
+        Comp = Computer("Mac Pro (Late 2013)",
+            "3.5 GHc 6-Core Intel Xeon E5",
+            1024, 64,
+            "macOS Big Sur", 2013, 1500) 
+        inventory : Dict[int, Dict] = {}
+        shop = ResaleShop(inventory)
         print("-" * 21)
         print("COMPUTER RESALE STORE")
         print("-" * 21)
 
         # Add it to the resale store's inventory
-        print("Buying", object["description"])
+        print("Buying", ["description"])
         print("Adding to inventory...")
-        computer_id = object.buy()
+        computer_id = shop.buy(Comp)
         print("Done.\n")
 
         # Make sure it worked by checking inventory
         print("Checking inventory...")
-        object.print_inventory()
+        shop.printInventory(inventory)
         print("Done.\n")
 
         # Now, let's refurbish it
         new_OS = "MacOS Monterey"
         print("Refurbishing Item ID:", computer_id, ", updating OS to", new_OS)
         print("Updating inventory...")
-        object.refurbish(computer_id, new_OS)
+        shop.refurbish(computer_id, new_OS)
         print("Done.\n")
 
         # Make sure it worked by checking inventory
-        object.print("Checking inventory...")
-        object.print_inventory()
+        shop.print("Checking inventory...")
+        shop.printInventory(inventory)
         print("Done.\n")
         
         # Now, let's sell it!
         print("Selling Item ID:", computer_id)
-        object.sell(computer_id)
+        shop.sell(computer_id)
         
         # Make sure it worked by checking inventory
         print("Checking inventory...")
-        object.print_inventory()
+        shop.print_inventory()
         print("Done.\n")
 
 # Calls the main() function when this file is run
