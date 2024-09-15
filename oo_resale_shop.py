@@ -59,7 +59,7 @@ def main():
             "3.5 GHc 6-Core Intel Xeon E5",
             1024, 64,
             "macOS Big Sur", 2013, 1500) 
-        inventory : Dict[int, Dict] = {}
+        inventory : Dict[int, Dict] = {Comp.attributes()}
         shop = ResaleShop(inventory)
         print("-" * 21)
         print("COMPUTER RESALE STORE")
