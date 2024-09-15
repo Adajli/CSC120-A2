@@ -1,5 +1,6 @@
 class ResaleShop:
-    from typing import Dict, Optional
+    from typing import Dict, Optional 
+   
     # What attributes will it need?
     inventory : Dict[int, Dict] = {}
     itemID = 0 
@@ -10,6 +11,7 @@ class ResaleShop:
                   inventory:Dict[int,Dict], computer):
         self.item_id = 0
         self.inventory = {}
+        import computer
         self.computer = computer(self)
 
     # What methods will you need?
@@ -46,12 +48,9 @@ class ResaleShop:
         else:
             print("No inventory to display.")
 def main():
-    computer = computer(
-            "Mac Pro (Late 2013)",
-            "3.5 GHc 6-Core Intel Xeon E5",
-            1024, 64,
-            "macOS Big Sur", 2013, 1500
-        )    
+     object = ResaleShop._init_(
+        ) 
+        
     print("-" * 21)
     print("COMPUTER RESALE STORE")
     print("-" * 21)
@@ -69,10 +68,10 @@ def main():
 
     # Now, let's refurbish it
     new_OS = "MacOS Monterey"
-    computer.print("Refurbishing Item ID:", computer_id, ", updating OS to", new_OS)
-    computer.print("Updating inventory...")
-    computer.refurbish(computer_id, new_OS)
-    computer.print("Done.\n")
+    print("Refurbishing Item ID:", computer_id, ", updating OS to", new_OS)
+    print("Updating inventory...")
+    refurbish(computer_id, new_OS)
+    print("Done.\n")
 
     # Make sure it worked by checking inventory
     computer.print("Checking inventory...")
