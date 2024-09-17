@@ -16,7 +16,7 @@ class ResaleShop:
        
     # What methods will you need?
    
-    def refurbish(self,item_id: int, new_os: Optional[str] = None):
+    def refurbish(self,item_id: int, new_os: Optional[str] ):
         if item_id in self.inventory:
             computer = self.inventory[item_id] # locate the computer
             if int(computer["year_made"]) < 2000:
@@ -34,7 +34,7 @@ class ResaleShop:
             print("Item", item_id , "not found. Please select another item to refurbish.")
 
     def buy(self,computer):
-        global item_id
+        global itemID
         self.item_id += 1 # increment itemID
         self.item_id  = computer
         return self.item_id
@@ -89,7 +89,7 @@ def main():
         print("Done.\n")
         
         # Now, let's sell it!
-        print("Selling Item ID:", computer_id,inventory)
+        print("Selling Item ID:", ["computer_id"],inventory)
         shop.sell(computer_id)
         
         # Make sure it worked by checking inventory
