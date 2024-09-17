@@ -43,7 +43,10 @@ class Computer:
         self.year_made = self.year_made +1
     # Get year
     def getYear(year_made):
-         return year_made
+        return year_made
+    def __str__(self) -> str:
+        return "Desc:" + self.description + "\n" + "Processor:" + self.processor_type + "\n"+ "HD Capacity:" + str(self.hard_drive_capacity) + "\n"+ "Memory:" + str(self.memory) + "\n"+ "Operating System:" + self.operating_system + "\n" + "Year Made:" + str(self.year_made) + "\n"+ "Price:" + str(self.price) + "\n"
+
 def main():
         my_computer = Computer(
             "Mac Pro (Late 2013)",
@@ -54,6 +57,7 @@ def main():
         #my_computer.updatePrice(150)
         #my_computer.updateYear(my_computer.getYear())
         #my_computer.updateOS("macOS Ventura 13.6 ")
+        print(my_computer.__str__())
         print(my_computer.attributes())
 
 main()
