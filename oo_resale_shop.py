@@ -44,7 +44,7 @@ class ResaleShop:
         # For each item
             for item_id in inventory:
                 # Print its details
-                print(f'Item ID: {item_id} : {inventory[item_id].attributes}')
+                print(f'Item ID: {item_id} : {inventory[item_id]}')
         else:
             print("No inventory to display.")
     def sell(self,item_id: int):
@@ -59,7 +59,7 @@ def main():
             "3.5 GHc 6-Core Intel Xeon E5",
             1024, 64,
             "macOS Big Sur", 2013, 1500) 
-        inventory : Dict[int, Dict] = {}
+        inventory : Dict[int, Dict] = {"description": Comp.description, "processor_type":Comp.processor_type, "hard_drive_capacity":Comp.hard_drive_capacity, "memory":Comp.memory, "operating_system":Comp.operating_system, "year_made":Comp.year_made, "price":Comp.price}
         shop = ResaleShop(inventory)
         print("-" * 21)
         print("COMPUTER RESALE STORE")
