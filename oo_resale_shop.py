@@ -11,7 +11,7 @@ class ResaleShop:
     def __init__(self, 
                   inventory:Dict[int,Dict]):
         self.item_id = 0
-        self.inventory = {}
+        self.inventory = inventory
 
        
     # What methods will you need?
