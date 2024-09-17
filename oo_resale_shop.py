@@ -34,7 +34,7 @@ class ResaleShop:
             print("Item", item_id , "not found. Please select another item to refurbish.")
 
     def buy(self,computer):
-        global itemID
+        global item_id
         self.item_id += 1 # increment itemID
         self.item_id  = computer
         return self.item_id
