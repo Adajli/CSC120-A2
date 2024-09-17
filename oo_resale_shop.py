@@ -35,7 +35,7 @@ class ResaleShop:
 
     def buy(self,computer):
         global itemID
-        self.item_id += 1 # increment item_id
+        self.item_id += 1 # increment itemID
         self.item_id  = computer
         return self.item_id
     def printInventory(self,inventory):
@@ -89,7 +89,7 @@ def main():
         print("Done.\n")
         
         # Now, let's sell it!
-        print("Selling Item ID:", ["computer_id"],inventory)
+        print("Selling Item ID:", computer_id,inventory)
         shop.sell(computer_id)
         
         # Make sure it worked by checking inventory
