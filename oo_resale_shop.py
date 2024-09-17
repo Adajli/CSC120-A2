@@ -8,9 +8,9 @@ class ResaleShop:
   
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
-    def __init__(self, 
+    def __init__(self,
                   inventory:Dict[int,Dict]):
-        self.item_id = 0
+
         self.inventory = inventory
 
        
@@ -35,7 +35,7 @@ class ResaleShop:
 
     def buy(self,computer):
         global itemID
-        self.item_id += 1 # increment itemID
+        self.item_id += 1 # increment item_id
         self.item_id  = computer
         return self.item_id
     def printInventory(self,inventory):
