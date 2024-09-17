@@ -23,10 +23,10 @@ class Computer:
         self.description = description
         self.processor_type = processor_type
         self.hard_drive_capacity = hard_drive_capacity
-        self.memory = 0
+        self.memory = memory
         self. operating_system = operating_system
         self.year_made = year_made
-        self.price = 0 
+        self.price = price
 
     # What methods will you need? 
     'Saves attributes of the computer by printing them.'
@@ -51,9 +51,9 @@ def main():
             1024, 64,
             "macOS Big Sur", 2013, 1500
         )    
-        my_computer.updatePrice(150)
-        my_computer.updateYear(my_computer.getYear())
-        my_computer.updateOS("macOS Ventura 13.6 ")
+        #my_computer.updatePrice(150)
+        #my_computer.updateYear(my_computer.getYear())
+        #my_computer.updateOS("macOS Ventura 13.6 ")
         print(my_computer.attributes())
 
 main()
