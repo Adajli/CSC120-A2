@@ -3,20 +3,21 @@ from computer import *
 class ResaleShop:
    
     # What attributes will it need?
-    inventory : Dict[int, Dict] = {}
-    item_id = 0 
+    inventory : Dict[int, Computer] = {}
+    item_id : int 
   
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
     def __init__(self,
-                  inventory:Dict[int,Dict]):
-
+                  inventory:dict):
         self.inventory = inventory
+        self.item_id = 0
+       
 
        
     # What methods will you need?
    
-    def refurbish(self,item_id: int, new_os: Optional[str] ):
+    def refurbish(self,item_id: int, new_os: Optional[str] = None ):
         if item_id in self.inventory:
             computer = self.inventory[item_id] # locate the computer
             if int(computer["year_made"]) < 2000:
@@ -33,11 +34,12 @@ class ResaleShop:
         else:
             print("Item", item_id , "not found. Please select another item to refurbish.")
 
-    def buy(self,computer):
-        global itemID
+    def buy(self,computer:Dict):
         self.item_id += 1 # increment itemID
         self.item_id  = computer
+        self.inventory[self.item_id] = {"description": computer.description, "processor_type":computer.processor_type, "hard_drive_capacity":computer.hard_drive_capacity, "memory":computer.memory, "operating_system":computer.operating_system, "year_made":computer.year_made, "price":computer.price}
         return self.item_id
+    
     def printInventory(self,inventory):
         # If the inventory is not empty
         if inventory:
@@ -47,6 +49,7 @@ class ResaleShop:
                 print(f'Item ID: {item_id} : {inventory[item_id]}')
         else:
             print("No inventory to display.")
+
     def sell(self,item_id: int):
         if item_id in self.inventory:
             del self.inventory[item_id]
@@ -59,14 +62,14 @@ def main():
             "3.5 GHc 6-Core Intel Xeon E5",
             1024, 64,
             "macOS Big Sur", 2013, 1500) 
-        inventory : Dict[int, Dict] = {"description": Comp.description, "processor_type":Comp.processor_type, "hard_drive_capacity":Comp.hard_drive_capacity, "memory":Comp.memory, "operating_system":Comp.operating_system, "year_made":Comp.year_made, "price":Comp.price}
+        inventory : Dict[int, Computer] = {"description": Comp.description, "processor_type":Comp.processor_type, "hard_drive_capacity":Comp.hard_drive_capacity, "memory":Comp.memory, "operating_system":Comp.operating_system, "year_made":Comp.year_made, "price":Comp.price}
         shop = ResaleShop(inventory)
         print("-" * 21)
         print("COMPUTER RESALE STORE")
         print("-" * 21)
 
         # Add it to the resale store's inventory
-        print("Buying", ["description"])
+        print("Buying", "description")
         print("Adding to inventory...")
         computer_id = shop.buy(Comp)
         print("Done.\n")
