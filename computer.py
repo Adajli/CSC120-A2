@@ -42,8 +42,8 @@ class Computer:
     def updateYear(self, year_made):
         self.year_made = self.year_made +1
     # Get year
-    def getYear(year_made):
-        return year_made
+    def getYear(self,year_made):
+        return self.year_made
     def __str__(self) -> str:
         return "Desc:" + self.description + "\n" + "Processor:" + self.processor_type + "\n"+ "HD Capacity:" + str(self.hard_drive_capacity) + "\n"+ "Memory:" + str(self.memory) + "\n"+ "Operating System:" + self.operating_system + "\n" + "Year Made:" + str(self.year_made) + "\n"+ "Price:" + str(self.price) + "\n"
 
