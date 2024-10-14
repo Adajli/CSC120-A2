@@ -3,7 +3,7 @@ from computer import *
 class ResaleShop:
    
     # What attributes will it need?
-    inventory : Dict[int, Computer] = {}
+    inventory : list[int, Computer] = {}
     item_id : int 
   
     # How will you set up your constructor?
